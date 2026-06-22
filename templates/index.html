@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyzer</title>
+
+    <style>
+
+        body{
+            background-color: rgb(126, 212, 158);
+            font-family: Arial;
+            text-align:center;
+            margin-top:30px;
+        }
+
+         h1, h2 {
+        color: rgb(235, 228, 237);
+
+         }
+
+        button{
+            padding:10px 20px;
+            background:#0c3a15;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        .container {
+        max-width: 500px;
+        height: 250px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: rgb(28, 115, 67);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(238, 61, 61, 0.1);
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 style="text-decoration: underline;">AI Resume Analyzer</h1>
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+        
+        <input type="file" name="resume" required>
+        <br><br>
+
+        <button type="submit">
+            Analyze Resume
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

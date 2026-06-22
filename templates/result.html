@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analysis Result</title>
+
+    <style>
+
+        body{
+            text-align: center;
+            background-color: rgb(93, 157, 116);
+            font-family:Arial;
+        
+        }
+
+        .good{
+            color:rgb(56, 28, 106);
+        }
+
+        .bad{
+            color:rgb(99, 20, 69);
+        }
+        .container {
+            background-color: rgb(28, 115, 67);
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(238, 61, 61, 0.1);
+        }
+         h1 {
+      
+        text-decoration: underline;
+    }
+    
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+<h1>Resume Analysis Result</h1>
+
+
+<h2>Resume Score: {{score}}%</h2>
+
+<h3 style="text-decoration: underline;" class="good">Skills Found</h3>
+
+
+
+    {% for skill in found_skills %}
+    <li>{{skill}}</li>
+    {% endfor %}
+
+
+<h3 style="text-decoration: underline;" class="bad">Missing Skills</h3>
+
+
+    {% for skill in missing_skills %}
+   <li>{{skill}}</li>
+    {% endfor %}
+</div>
+
+<a href="/">Analyze Another Resume</a>
+ 
+
+</body>
+</html>
